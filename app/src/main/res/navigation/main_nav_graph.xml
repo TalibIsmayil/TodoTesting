@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/foldersFragment">
+
+    <fragment
+        android:id="@+id/foldersFragment"
+        android:name="com.scrumlaunch.todotesting.presentation.folders.FoldersFragment"
+        android:label="FoldersFragment"
+        tools:layout="@layout/fragment_folders">
+        <action
+            android:id="@+id/action_to_addFolderFragment"
+            app:destination="@id/addFolderFragment" />
+
+        <action
+            android:id="@+id/action_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addFolderFragment"
+        android:name="com.scrumlaunch.todotesting.presentation.addfolder.AddFolderFragment"
+        android:label="AddFolderFragment"
+        tools:layout="@layout/fragment_add_folder" />
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.scrumlaunch.todotesting.presentation.notes.NotesFragment"
+        android:label="NotesFragment"
+        tools:layout="@layout/fragment_notes">
+        <action
+            android:id="@+id/action_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.scrumlaunch.todotesting.presentation.addnote.AddNoteFragment"
+        android:label="AddNoteFragment"
+        tools:layout="@layout/fragment_add_note" />
+</navigation>
